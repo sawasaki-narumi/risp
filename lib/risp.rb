@@ -1,7 +1,7 @@
 require './lib/env'
 
 class Risp
-  def self.eval(exps, env)
+  def self.eval(exps, env=Env.globals)
     if exps.instance_of?(String)
       env.search(exps)[exps]
     elsif !exps.instance_of?(Array)

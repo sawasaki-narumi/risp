@@ -15,7 +15,6 @@ class Env < Hash
 
   def self.globals
     env = new
-    env.merge({ "+" => Env::Operator.method(:+), "==" => Env::Operator.method(:==) })
     env.merge({
                 "+" => Env::Operator.method(:+), "-" => Env::Operator.method(:-),
                 "/" => Env::Operator.method(:/), "*" => Env::Operator.method(:*),
